@@ -103,7 +103,7 @@
       <section class="rsvp-location-bg">
         <div class="rsvp-location-flex">
 
-                   <!-- Caja Confirmación -->
+          <!-- Caja Confirmación -->
           <div class="rsvp" id="confirmar">
             <img src="icons/calendar.svg" alt="Confirmar asistencia" class="fiesta-icon1">
             <h2 class="section-title">Confirmá tu asistencia</h2>
@@ -137,19 +137,19 @@
             </div>
           </div>
 
-        <!-- Caja Fiesta -->
-        <div class="location-box" id="comollegar">
-          <img src="icons/location.svg" alt="Fiesta" class="fiesta-icon1">
-          <h2 class="section-title">Fiesta</h2>
-          <p class="location-address">
-            Ruta Nacional 205 Km114,5, <br>
-            B7240 Lobos, Provincia de Buenos Aires
-          </p>
-          <div class="location-buttons">
-            <a href="https://maps.app.goo.gl/BjtBPfagdCHamfFs5" class="location-btn" target="_blank">¿Cómo llegar?</a>
-            <button class="location-btn" onclick="abrirModal('modalReserva')">Con reserva</button>
+          <!-- Caja Fiesta -->
+          <div class="location-box" id="comollegar">
+            <img src="icons/location.svg" alt="Fiesta" class="fiesta-icon1">
+            <h2 class="section-title">Fiesta</h2>
+            <p class="location-address">
+              Ruta Nacional 205 Km114,5, <br>
+              B7240 Lobos, Provincia de Buenos Aires
+            </p>
+            <div class="location-buttons">
+              <a href="https://maps.app.goo.gl/BjtBPfagdCHamfFs5" class="location-btn" target="_blank">¿Cómo llegar?</a>
+              <button class="location-btn" onclick="abrirModal('modalReserva')">Con reserva</button>
+            </div>
           </div>
-        </div>
 
         </div>
       </section>
@@ -203,7 +203,7 @@
           <h2 class="section-title">Confirmar asistencia</h2>
 
           <form class="modal-form-rsvp"
-            action="https://script.google.com/macros/s/AKfycbxDCTqfisTxGmqR0r9HHNt13c1Q_s_nskOV6TsqqSmCCSj-_I7vsHk7jCErHr9VFiwtVg/exec"
+            action="https://script.google.com/macros/s/AKfycbzB_NOXp1WHkNdtx3GkpUe8bGl79hHrlD0DgLnmTark5F4QPutGs3rm5TFn1tN9OqnZ8w/exec"
             method="POST" target="hidden_iframe" onsubmit="enviarFormulario(); cerrarModal('modalConfirmar');">
 
             <input type="text" name="NOMBRE Y APELLIDO" placeholder="Nombre y Apellido" class="input-cancion" required>
@@ -219,12 +219,13 @@
             </div>
 
             <div class="modal-rsvp-group">
-              <p class="location-address">¿Alguna restricción alimentaria?</p>
-              <label><input type="radio" name="RESTRICCIÓN ALIMENTARIA" value="No" required> No</label>
-              <label><input type="radio" name="RESTRICCIÓN ALIMENTARIA" value="Sí, soy celíaco"> Sí, soy celíaco</label>
-              <label><input type="radio" name="RESTRICCIÓN ALIMENTARIA" value="Sí, soy vegano"> Sí, soy vegano</label>
-              <label><input type="radio" name="RESTRICCIÓN ALIMENTARIA" value="Sí, soy vegetariano"> Sí, soy
-                vegetariano</label>
+              <p class="location-address">¿Cuántas personas asistirán (incluyéndote)?</p>
+              <select name="ACOMPAÑANTES" class="input-cancion" required>
+                <option value="1">Solo yo</option>
+                <option value="2">+1 (2 personas)</option>
+                <option value="3">+2 (3 personas)</option>
+                <option value="4">+3 (4 personas)</option>
+              </select>
             </div>
 
             <div class="modal-rsvp-group">
